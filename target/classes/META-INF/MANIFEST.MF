@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: My Airlines
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Rudrananda
+Implementation-Vendor-Id: com.airlines.travel
+Build-Jdk: 1.8.0_131
+Implementation-URL: http://projects.spring.io/spring-boot/my-airlines/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
