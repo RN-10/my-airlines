@@ -19,16 +19,6 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
-	@Autowired
-	private AuthenticationManager authenticationManager;
-	
-	@Autowired
-	private MyUserDetailsService myUserDetailsService;
-	
-	@Autowired
-	private JwtUtil jwtUtil;
-	
-	
 	@RequestMapping("/users")
 	public List<User> getAllUser() {	
 		return userService.getAllUsers();
