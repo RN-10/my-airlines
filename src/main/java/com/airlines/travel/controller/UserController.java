@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.airlines.travel.Entity.User;
+import com.airlines.travel.service.UserService;
 
 @RestController
 public class UserController {
