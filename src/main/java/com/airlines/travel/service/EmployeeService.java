@@ -14,27 +14,27 @@ public class EmployeeService {
 	@Autowired
 	private EmployeeRepository employeeRepository;
 	
-	public List<Employee> getAllUsers() {	
+	public List<Employee> getAllEmployees() {	
 		List<Employee> employees = new ArrayList<Employee>();
 		employeeRepository.findAll().forEach(employees::add);
 		return employees;
 	}
 	
-	public Employee getUser(int employeeId) {	
+	public Employee getEmployee(int employeeId) {	
 		return employeeRepository.findOne(employeeId);
 	}
 	
-	public void addUser(Employee employee) {
+	public void addEmployee(Employee employee) {
 		employeeRepository.save(employee);
 	}
 
-	public void updateUser(int employeeId, Employee employee) {
+	public void updateEmployee(int employeeId, Employee employee) {
 		if (employeeRepository.exists(employeeId)) {
 			employeeRepository.save(employee);
 		}
 	}
 	
-	public void deleteUser (int employeeId) {
+	public void deleteEmployee (int employeeId) {
 		employeeRepository.delete(employeeId);
 	}
 	

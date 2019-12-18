@@ -16,30 +16,30 @@ import com.airlines.travel.service.EmployeeService;
 public class UserController {
 	
 	@Autowired
-	private EmployeeService userService;
+	private EmployeeService employeeService;
 	
-	@RequestMapping("/users")
-	public List<Employee> getAllUser() {	
-		return userService.getAllUsers();
+	@RequestMapping("/employees")
+	public List<Employee> getAllEmployees() {	
+		return employeeService.getAllEmployees();
 	}
 	
-	@RequestMapping("/user/{userId}")
-	public Employee getUser(@PathVariable int userId) {	
-		return userService.getUser(userId);
+	@RequestMapping("/employee/{employeeId}")
+	public Employee getEmployee(@PathVariable int employeeId) {	
+		return employeeService.getEmployee(employeeId);
 	}
 	
-	@RequestMapping(value="/user", method=RequestMethod.POST)
-	public void addUser(@RequestBody Employee user) {
-		userService.addUser(user);
+	@RequestMapping(value="/employee", method=RequestMethod.POST)
+	public void addEmployee(@RequestBody Employee employee) {
+		employeeService.addEmployee(employee);
 	}
 	
-	@RequestMapping(value="/user/{userId}", method=RequestMethod.PUT)
-	public void updateUser(@PathVariable int userId, @RequestBody Employee user) {
-		userService.updateUser(userId, user);
+	@RequestMapping(value="/employee/{employeeId}", method=RequestMethod.PUT)
+	public void updateEmployee(@PathVariable int employeeId, @RequestBody Employee employee) {
+		employeeService.updateEmployee(employeeId, employee);
 	}
 	
-	@RequestMapping(value="/user/{userId}", method=RequestMethod.DELETE)
-	public void updateUser(@PathVariable int userId) {
-		userService.deleteUser(userId);
+	@RequestMapping(value="/employee/{employeeId}", method=RequestMethod.DELETE)
+	public void deleteEmployee(@PathVariable int employeeId) {
+		employeeService.deleteEmployee(employeeId);
 	}
 }
