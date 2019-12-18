@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Entity
 @Component
-public class User {
+public class Employee {
 	
 	@Id
 	private int id;
