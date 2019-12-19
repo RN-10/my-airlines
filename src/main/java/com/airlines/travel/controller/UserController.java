@@ -13,6 +13,7 @@ import com.airlines.travel.Entity.Employee;
 import com.airlines.travel.service.EmployeeService;
 
 @RestController
+@CrossOrigin
 public class UserController {
 	
 	@Autowired
