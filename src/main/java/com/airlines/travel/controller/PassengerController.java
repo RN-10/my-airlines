@@ -14,12 +14,12 @@ import com.airlines.travel.Entity.Passenger;
 import com.airlines.travel.service.PassengerService;
 
 @RestController
+@CrossOrigin
 public class PassengerController {
 	
 	@Autowired
 	private PassengerService passengerService;
 	
-	@CrossOrigin
 	@RequestMapping("/passengers")
 	public List<Passenger> getAllPassengers() {
 		return passengerService.getAllPassegners();
